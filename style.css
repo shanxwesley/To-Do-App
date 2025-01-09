@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
-    font-family: 'Comic Sans MS', sans-serif; /* Childish, playful font */
-    background: linear-gradient(45deg, #a2c2e4, #f7c8d1); /* Pastel Blue and Pastel Pink Gradient */
+    font-family: 'Comic Sans MS', sans-serif;
+    background: linear-gradient(45deg, #a2c2e4, #f7c8d1);
     background-size: 600% 600%;
     animation: gradientAnimation 12s ease infinite;
     margin: 0;
@@ -12,9 +12,9 @@ body {
     height: 100vh;
     color: #333;
     box-sizing: border-box;
-    background-image: url('background.png'); /* Add your image path here */
+    background-image: url('background.png');
     background-position: center center;
-    background-size: cover; /* Cover the entire viewport */
+    background-size: cover;
     background-blur: 5px;
     position: relative;
 }
@@ -28,11 +28,11 @@ body {
 /* Main Container */
 .todo-container {
     background: rgba(255, 255, 255, 0.85);
-    padding: 20px; /* Reduced padding */
+    padding: 20px;
     border-radius: 30px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     width: 350px;
-    height: 500px; /* Fixed height for the modal */
+    height: 500px;
     text-align: center;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -46,14 +46,14 @@ body {
     margin-top: 30px;
     list-style: none;
     padding: 0;
-    overflow-y: auto; /* Enables vertical scrolling */
-    max-height: 250px; /* Allows scrolling, shows at least 3 tasks */
+    overflow-y: auto;
+    max-height: 250px;
 }
 
 /* Input Section */
 .input-container {
     display: flex;
-    gap: 10px; /* Reduced gap between input and button */
+    gap: 10px;
     margin-bottom: 15px;
 }
 
@@ -62,9 +62,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #f8f9fa; /* Soft white background */
-    padding: 10px; /* Reduced padding */
-    margin-bottom: 15px; /* Reduced margin */
+    background: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 15px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -77,30 +77,30 @@ body {
 
 .todo-item .task-text {
     flex: 1;
-    font-size: 1.1rem; /* Reduced font size */
+    font-size: 1.1rem;
     color: #333;
     font-weight: 500;
 }
 
-/* Scrollbar Styling (optional) */
+/* Scrollbar Styling */
 #todo-list::-webkit-scrollbar {
     width: 8px;
 }
 
 #todo-list::-webkit-scrollbar-thumb {
-    background: #a2c2e4; /* Pastel blue */
+    background: #a2c2e4;
     border-radius: 10px;
 }
 
 #todo-list::-webkit-scrollbar-thumb:hover {
-    background: #f7c8d1; /* Pastel pink */
+    background: #f7c8d1;
 }
 
 /* Heading */
 h1 {
-    font-size: 2.3rem; /* Reduced heading size */
-    margin-bottom: 20px; /* Reduced margin */
-    color: #f7a8b8; /* Light pastel pink */
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    color: #f7a8b8;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -109,107 +109,83 @@ h1 {
 /* Input Field */
 #todo-input {
     flex: 1;
-    padding: 12px; /* Reduced padding */
+    padding: 12px;
     border: 2px solid #ddd;
     border-radius: 30px;
     outline: none;
     font-size: 1.1rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: #f3faff; /* Light pastel blue */
+    background: #f3faff;
 }
 
 #todo-input:focus {
-    border-color: #f7c8d1; /* Pastel pink */
+    border-color: #f7c8d1;
     box-shadow: 0 0 10px rgba(247, 200, 209, 0.5);
 }
 
 /* Add Button */
 #add-btn {
-    padding: 12px 25px; /* Reduced padding */
+    padding: 12px 25px;
     border: none;
-    background: #f7c8d1; /* Pastel pink */
+    background: #f7c8d1;
     color: white;
     border-radius: 50px;
     cursor: pointer;
-    font-size: 1rem; /* Reduced font size */
+    font-size: 1rem;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #add-btn:hover {
-    background: #a2c2e4; /* Pastel blue */
+    background: #a2c2e4;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Filter and Sort Buttons Styles */
-.filter-container, .sort-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Reduced gap */
-    margin: 10px 0;
-}
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .todo-container {
+        width: 90%;
+        height: auto;
+    }
 
-.filter-container button, .sort-container button {
-    padding: 8px 15px; /* Reduced padding */
-    background-color: #f7c8d1; /* Pastel pink */
-    border: none;
-    border-radius: 30px;
-    font-size: 0.9rem; /* Reduced font size */
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    h1 {
+        font-size: 1.8rem;
+    }
 
-.filter-container button:hover, .sort-container button:hover {
-    background-color: #a2c2e4; /* Pastel blue */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
+    .todo-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
 
-/* Task Count */
-#task-count {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: #333;
-    font-weight: bold;
-}
+    .todo-item .task-text {
+        font-size: 1rem;
+    }
 
-/* Checkbox */
-.todo-item input[type="checkbox"] {
-    margin-right: 20px;
-    transition: all 0.3s ease;
-}
+    .input-container {
+        flex-direction: column;
+        gap: 5px;
+    }
 
-.todo-item input[type="checkbox"]:checked {
-    background-color: #f7c8d1; /* Pastel pink */
-    transform: scale(1.2);
-}
+    #todo-input {
+        font-size: 1rem;
+        padding: 10px;
+    }
 
-/* Button Styles */
-.todo-item button {
-    border: none;
-    background: #ff5f5f; /* Light red for delete button */
-    color: white;
-    padding: 8px 16px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    #add-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
 
-.todo-item button:hover {
-    background: #ff1f1f; /* Darker red */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
+    .filter-container, .sort-container {
+        flex-direction: column;
+        gap: 5px;
+    }
 
-/* Completed Task Style */
-.todo-item.completed .task-text {
-    text-decoration: line-through;
-    color: #aaa;
-}
-
-.todo-item.completed input[type="checkbox"] {
-    background-color: #a2c2e4; /* Pastel blue */
+    .filter-container button, .sort-container button {
+        width: 100%;
+        font-size: 0.85rem;
+    }
 }
